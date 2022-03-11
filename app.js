@@ -77,3 +77,39 @@ const showResult = (result) => {
 
 sumUp(showResult, 1, 2, 3, 4, 5, 6);
 sumUp(showResult, 4, 5, 'ad', 2, 3, 1);
+
+// Assignment 1
+// write an arrow function
+const sayHello = (name) => {
+  console.log(`Hi ${name}`);
+};
+
+sayHello('Soul');
+
+// adjust arrow function 3 times
+const sayHi = (greeting = 'hi', name = 'Max') => {
+  console.log(`${greeting} ${name}`);
+};
+
+sayHi('salutations', 'soul');
+sayHi();
+
+const sayHola = () => {
+  console.log("What's up soul?");
+};
+
+sayHola();
+
+const saySelam = (name = 'Max') => {
+  const checkInput = (...args) => {};
+  return `Selam, ${name}`;
+};
+
+console.log(saySelam('Soulyana'));
+console.log(saySelam());
+
+const whatsApp = (cb, ...strings) {
+  if (string in strings) {
+    
+  }
+}
