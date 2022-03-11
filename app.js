@@ -33,7 +33,7 @@ const getComputerChoice = () => {
   }
 };
 
-const getWinner = (cChoice, pChoice) => {
+const getWinner = (cChoice, pChoice) =>
   cChoice === pChoice
     ? RESULT_DRAW
     : (cChoice === ROCK && pChoice === PAPER) ||
@@ -41,7 +41,6 @@ const getWinner = (cChoice, pChoice) => {
       (cChoice === PAPER && pChoice === SCISSORS)
     ? RESULT_PLAYER_WINS
     : RESULT_COMPUTER_WINS;
-};
 
 startGameBtn.addEventListener('click', function () {
   if (gameIsRunning) {
@@ -55,8 +54,7 @@ startGameBtn.addEventListener('click', function () {
   console.log(computerSelection);
   const winner = getWinner(computerSelection, playerSelection);
   console.log(winner);
-  prompt(
-    `computer chose: ${computerSelection}, you chose: ${playerSelection} therefore ${winner}`
-  );
+  let message = `computer chose: ${computerSelection}, you chose: ${playerSelection} therefore ${winner}`;
+  alert(message);
   gameIsRunning = false;
 });
