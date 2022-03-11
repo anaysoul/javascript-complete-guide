@@ -60,23 +60,36 @@ startGameBtn.addEventListener('click', function () {
 });
 
 // not related to game
-const sumUp = (resultHandler, ...numbers) => {
+const combine = (resultHandler, operation, ...numbers) => {
   const validateNumber = (number) => {
     return isNaN(number) ? 0 : number;
   };
   let sum = 0;
   for (const num of numbers) {
-    sum += validateNumber(num);
+    if (operation === 'ADD' || operation === '+') {
+      sum += validateNumber(num);
+    } else {
+      sum -= validateNumber(num);
+    }
   }
-  resultHandler(sum);
+  resultHandler(sum, 'The result after adding all numbers is ');
 };
 
-const showResult = (result) => {
-  alert('The result after adding all numbers is ' + result);
+const showResult = (result, messageText) => {
+  alert(messageText + '' + result);
 };
 
-sumUp(showResult, 1, 2, 3, 4, 5, 6);
-sumUp(showResult, 4, 5, 'ad', 2, 3, 1);
+combine(
+  showResult.bind(this, 'The result after ADDING all numbers is: '),
+  '+',
+  1,
+  2,
+  3,
+  4,
+  5,
+  6
+);
+combine(showResult, '+', 4, 5, 'ad', 2, 3, 1);
 
 // Assignment 1
 // write an arrow function
@@ -108,8 +121,12 @@ const saySelam = (name = 'Max') => {
 console.log(saySelam('Soulyana'));
 console.log(saySelam());
 
-const whatsApp = (cb, ...strings) {
-  if (string in strings) {
-    
-  }
-}
+// const subtractUp = function (resultHandler, ...numbers) {
+//   let sum = 0;
+//   for (const num of numbers) {
+//     sum -= num;
+//   }
+//   resultHandler(sum);
+// };
+
+// subtractUp(showResult, 1, 10, 15, 20);
