@@ -29,3 +29,7 @@ button.addEventListener('click', () => {
   //   section.classList.toggle('visibile');
   section.classList.toggle('invisible');
 });
+
+// Adding elements via HTML in code
+const list = document.querySelector('ol');
+list.innerHTML += '<li>Item 4</li>';
