@@ -10,3 +10,7 @@ const listItemElements = document.getElementsByTagName('li'); // live changes av
 for (const listItemEl of listItemElements) {
   console.dir(listItemEl);
 }
+
+// traversing child nodes
+const ul = document.querySelector('ul');
+ul.children[1];
