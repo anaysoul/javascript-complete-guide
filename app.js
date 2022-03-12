@@ -14,3 +14,17 @@ for (const listItemEl of listItemElements) {
 // traversing child nodes
 const ul = document.querySelector('ul');
 ul.children[1];
+
+// using parentNode & parentElement
+const li = document.querySelector('li');
+li.parentElement.style.color = 'pink';
+
+// selecting sibling elements
+const ol = document.querySelector('ol');
+ol.previousElementSibling; // header
+ol.nextElementSibling; // input
+
+// DOM traversal vs query methods
+const OL = document.body.firstElementChild.nextElementSibling;
+const firstLi = OL.firstElementChild;
+console.log(firstLi);
