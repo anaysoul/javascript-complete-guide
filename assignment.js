@@ -36,3 +36,7 @@ list.innerHTML += '<li>Item 4</li>';
 const newLi = document.createElement('li');
 list.appendChild(newLi);
 newLi.textContent = 'Item 5';
+
+// inserting DOM elements
+list.prepend(newLi);
+list.lastElementChild.before(newLi);
