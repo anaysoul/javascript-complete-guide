@@ -52,3 +52,7 @@ const listItems2 = list.getElementsByTagName('li');
 console.log(listItems2);
 const newLi3 = document.createElement('li');
 list.append(newLi2, newLi3);
+
+// removing elements
+// list.remove(); // not supported on IE
+list.parentElement.removeChild(list);
