@@ -33,3 +33,6 @@ button.addEventListener('click', () => {
 // Adding elements via HTML in code
 const list = document.querySelector('ol');
 list.innerHTML += '<li>Item 4</li>';
+const newLi = document.createElement('li');
+list.appendChild(newLi);
+newLi.textContent = 'Item 5';
