@@ -44,3 +44,11 @@ list.lastElementChild.before(newLi);
 // clonging DOM nodes
 const newLi2 = newLi.cloneNode(true);
 list.append(newLi2);
+
+// live node lists vs static node lists
+const list1 = document.querySelector('ol');
+const listItems = document.querySelectorAll('li');
+const listItems2 = list.getElementsByTagName('li');
+console.log(listItems2);
+const newLi3 = document.createElement('li');
+list.append(newLi2, newLi3);
