@@ -28,3 +28,8 @@ ol.nextElementSibling; // input
 const OL = document.body.firstElementChild.nextElementSibling;
 const firstLi = OL.firstElementChild;
 console.log(firstLi);
+
+// styling dom elements
+const section = document.querySelector('section');
+// section.style.backgroundColor = 'blue';
+section.className = '';

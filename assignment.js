@@ -14,3 +14,18 @@ task2.textContent = 'Assignment - Solved';
 
 const task2a = document.querySelector('title');
 task2a.textContent = 'ASSIGNMNET - SOLVED';
+
+const section = document.querySelector('section');
+// section.style.backgroundColor = 'blue';
+section.className = ''; //remove class
+
+const button = document.querySelector('button');
+button.addEventListener('click', () => {
+  //   if (section.className === 'red-bg visible') {
+  //     section.className = 'red-bg invisible';
+  //   } else {
+  //     section.className = 'red-bg visible';
+  //   }
+  //   section.classList.toggle('visibile');
+  section.classList.toggle('invisible');
+});
