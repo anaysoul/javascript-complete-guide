@@ -40,3 +40,7 @@ newLi.textContent = 'Item 5';
 // inserting DOM elements
 list.prepend(newLi);
 list.lastElementChild.before(newLi);
+
+// clonging DOM nodes
+const newLi2 = newLi.cloneNode(true);
+list.append(newLi2);
