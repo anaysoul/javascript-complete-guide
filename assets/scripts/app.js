@@ -34,6 +34,7 @@ const deleteMovieHandler = (movieId) => {
   movies.splice(movieIndex, 1);
   listRoot.children[movieIndex].remove();
   closeMovieDeletionModal();
+  updateUI();
 };
 
 const startDeleteMovieHandler = (movieId) => {
