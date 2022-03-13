@@ -12,3 +12,18 @@ console.log(listItems);
 
 const arrayListItems = Array.from(listItems); //split characters into an array
 console.log(arrayListItems);
+
+const hobbies = ['cooking', 'coding', 'watching tv'];
+const personalData = [33, 'Soul', { moreDetail: [] }];
+
+const analyticsData = [
+  //multi-dimensonal arrays
+  [1, 1.6],
+  [-5.4, 2.1],
+];
+
+for (const data of analyticsData) {
+  for (const dataPoint of data) {
+    console.log(dataPoint);
+  }
+}
