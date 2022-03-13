@@ -28,27 +28,34 @@
 //   }
 // }
 
-const hobbies = ['sports', 'cooking'];
-hobbies.push('coding');
-hobbies.unshift('reading');
-hobbies.pop();
-hobbies.shift();
-console.log(hobbies);
+// const hobbies = ['sports', 'cooking'];
+// hobbies.push('coding');
+// hobbies.unshift('reading');
+// hobbies.pop();
+// hobbies.shift();
+// console.log(hobbies);
 
-hobbies[1] = 'Coding';
-console.log(hobbies);
+// hobbies[1] = 'Coding';
+// console.log(hobbies);
 
-hobbies[5] = 'exercising';
-console.log(hobbies, hobbies[4]);
+// hobbies[5] = 'exercising';
+// console.log(hobbies, hobbies[4]);
 
-hobbies.splice(1, 0, 'good food');
-console.log(hobbies);
+// hobbies.splice(1, 0, 'good food');
+// console.log(hobbies);
 
-hobbies.splice(0, 1);
-console.log(hobbies);
+// hobbies.splice(0, 1);
+// console.log(hobbies);
 
-hobbies.splice(2, 3);
-console.log(hobbies);
+// hobbies.splice(2, 3);
+// console.log(hobbies);
 
-const removedElements = hobbies.splice(-1, 1);
-console.log(hobbies);
+// const removedElements = hobbies.splice(-1, 1);
+// console.log(hobbies);
+
+const testResults = [1, 5.3, 1.5, 10.99, -5, 10];
+const storedResults = testResults.slice(-1, -3);
+
+testResults.push(5.91);
+
+console.log(storedResults, testResults);
