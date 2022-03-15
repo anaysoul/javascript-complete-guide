@@ -3,25 +3,29 @@ class Product {
   imageUrl;
   description;
   price;
+
+  constructor(title, image, desc, price) {
+    this.title = title;
+    this.imageUrl = image;
+    this.description = desc;
+    this.price = price;
+  }
 }
 
 const productList = {
   products: [
-    new Product(),
-    {
-      title: 'Pillow',
-      imageUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/a/ad/Pillows_on_a_hotel_bed.jpg',
-      price: 19.99,
-      description: 'Soft pillows!',
-    },
-    {
-      title: 'Carpet',
-      imageUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/c/cd/Polonaise_carpet_-_Kashan_%28Iran%29_-_17th_century_-_MET_-_Inventory_number_51.197.jpg',
-      price: 89.99,
-      description: 'A historic carpet!',
-    },
+    new Product(
+      'Pillow',
+      'https://upload.wikimedia.org/wikipedia/commons/a/ad/Pillows_on_a_hotel_bed.jpg',
+      19.99,
+      'Soft pillows!'
+    ),
+    new Product(
+      'Carpet',
+      'https://upload.wikimedia.org/wikipedia/commons/c/cd/Polonaise_carpet_-_Kashan_%28Iran%29_-_17th_century_-_MET_-_Inventory_number_51.197.jpg',
+      89.99,
+      'A historic carpet!'
+    ),
   ],
   render() {
     const renderHook = document.getElementById('app');
