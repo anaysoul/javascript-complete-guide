@@ -1,5 +1,13 @@
+class Product {
+  title = 'DEFAULT';
+  imageUrl;
+  description;
+  price;
+}
+
 const productList = {
   products: [
+    new Product(),
     {
       title: 'Pillow',
       imageUrl:
@@ -25,7 +33,7 @@ const productList = {
       prodEl.innerHTML = `
           <div>
             <img src="${prod.imageUrl}" alt="${prod.title}" >
-            <div>
+            <div class="product-item__content">
                 <h2>${prod.title}</h2>
                 <h3>\$${prod.price}</h3>
                 <p>${prod.description}</p>
